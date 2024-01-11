@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RecipieApp</string>
+
+    <string name="time">time</string>
+    <string name="calorie">calorie</string>
+    <string name="price">price</string>
+    <string name="materials">Materials</string>
+    <string name="content">this recipes provide the perfect toppings and complements for classic spaghetti noodles.</string>
+</resources>

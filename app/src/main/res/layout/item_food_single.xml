@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.bipin.recipieapp.model.MaterialsItem" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:shadowColor="@color/black"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardElevation="@dimen/_6sdp"
+        card_view:cardBackgroundColor="@android:color/white"
+        card_view:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v)->model.onItemClick.onClick(v,model.viewHolder,``)}">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivItem"
+                placeHolder="@{model.img}"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_300sdp"
+                android:background="@color/purple_200"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pexels_alleksana_5949888"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/customRoundedImageView" />
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blurred_bg"
+                android:fontFamily="@font/nunito_sans_semibold"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="@{model.name}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="@id/ivItem"
+                app:layout_constraintEnd_toEndOf="@id/ivItem"
+                app:layout_constraintStart_toStartOf="@id/ivItem" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:src="@drawable/bookmark"
+                android:tint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/tvItemName"
+                app:layout_constraintEnd_toEndOf="@id/tvItemName"
+                app:layout_constraintTop_toTopOf="@id/tvItemName" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

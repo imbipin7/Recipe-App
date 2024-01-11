@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splash">
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.bipin.recipieapp.views.splash.SplashFragment"
+        android:label="Splash">
+        <action
+            android:id="@+id/action_splash_to_keep"
+            app:destination="@id/keep" />
+        <action
+            android:id="@+id/action_splash_to_recipe"
+            app:destination="@id/recipe" />
+        <action
+            android:id="@+id/action_splash_to_recipeDetail"
+            app:destination="@id/recipeDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/keep"
+        android:name="com.bipin.recipieapp.views.keep.KeepFragment"
+        android:label="Keep">
+        <action
+            android:id="@+id/action_keep_to_recipeDetail"
+            app:destination="@id/recipeDetail"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipe"
+        android:name="com.bipin.recipieapp.views.recipe.RecipeFragment"
+        android:label="Recipe">
+        <action
+            android:id="@+id/action_recipe_to_recipeDetail"
+            app:destination="@id/recipeDetail"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetail"
+        android:name="com.bipin.recipieapp.views.recipeDetail.RecipeDetailFragment"
+        android:label="RecipeDetail">
+        <argument
+            android:name="data"
+            app:argType="com.bipin.recipieapp.model.MaterialsItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPage"
+        android:name="com.bipin.recipieapp.views.mypage.MyPageFragment"
+        android:label="MyPage" />
+    <fragment
+        android:id="@+id/search"
+        android:name="com.bipin.recipieapp.views.search.SearchFragment"
+        android:label="Search" />
+</navigation>

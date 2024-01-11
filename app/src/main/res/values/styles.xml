@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="customRoundedImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="MyExpandedTitle" parent="@style/TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="fontFamily">@font/nunito_sans_semibold</item>
+        <item name="android:fontFamily">@font/nunito_sans_semibold</item>
+
+    </style>
+
+    <style name="MyCollapsedTitle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="fontFamily">@font/nunito_sans_bold</item>
+        <item name="android:fontFamily">@font/nunito_sans_bold</item>
+
+    </style>
+</resources>
